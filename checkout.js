@@ -1,0 +1,24 @@
+/**
+ * checkout.js
+ * 
+ * This file contains the checkout logic. 
+ * For the demo, you will modify this file in a GitHub PR to "introduce the bug".
+ */
+
+function v1Checkout(userId) {
+  // Safe, legacy checkout
+  return { status: 'success', method: 'v1_legacy', user: userId }
+}
+
+function v2Checkout(userId) {
+  // NEW V2 CHECKOUT LOGIC 
+  // (In your GitHub PR, you will add the buggy code below this line)
+  
+  // BUG: Attempting to read a property from an undefined object
+  // const dbConnection = undefined;
+  // dbConnection.connect(); 
+  
+  return { status: 'success', method: 'v2_new', user: userId }
+}
+
+module.exports = { v1Checkout, v2Checkout }
